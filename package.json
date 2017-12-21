@@ -1,13 +1,10 @@
 {
-  "name": "eslint-config-rise",
+  "name": "@rise-digital/eslint-config-rise",
   "version": "1.0.0",
-  "description": "",
+  "description": "ESLint configurations by Rise",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "babel-eslint": "^8.0.3",
     "eslint-config-standard": "^11.0.0-beta.0",
