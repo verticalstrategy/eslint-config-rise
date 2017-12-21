@@ -1,11 +1,11 @@
 module.exports = {
   extends: 'plugin:react/recommended',
   plugins: [
-    'react'
+    'react',
   ],
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
-    }
-  }
+      jsx: true,
+    },
+  },
 }

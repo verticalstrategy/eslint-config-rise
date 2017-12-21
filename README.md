@@ -4,69 +4,26 @@ ESLint configurations used by us in Rise, we thought you might love them too.
 ## Install
 `yarn add --dev eslint prettier @rise-digital/eslint-config-rise`
 
-## Configurations
-
-### Standard
-JavaScript Standard Style linting rules.
+## Configuration
 
 ```js
 // .eslintrc.js
-module.exports = {
-  extends: '@rise-digital/rise'
-}
+const config = require('@rise-digital/eslint-config-rise')
+module.exports = config()
 ```
 
-### Flowtype
-Flow type linting rules.
+Or, if running a node app (notice the argument `'node'` passed to the config creator):
 
 ```js
 // .eslintrc.js
-module.exports = {
-  extends: [
-    /* ... */
-    '@rise-digital/rise/flowtype'
-  ]
-}
+const config = require('@rise-digital/eslint-config-rise')
+module.exports = config('node')
 ```
 
-### React
-React linting rules.
+## Current supported packages
 
-```js
-// .eslintrc.js
-module.exports = {
-  extends: [
-    /* ... */
-    '@rise-digital/rise/react'
-  ]
-}
-```
+Ass default `standard` & `prettier` is included in the config.
 
-### React Native
-React Native linting rules.
-
-```js
-// .eslintrc.js
-module.exports = {
-  extends: [
-    /* ... */
-    '@rise-digital/rise/react',
-    '@rise-digital/rise/react-native'
-  ]
-}
-```
-
-### Prettier
-Prettier formatting and linting rules.
-
-_This needs to be added as the last rule, since it's overriding already existing rules._
-
-```js
-// .eslintrc.js
-module.exports = {
-  extends: [
-    /* ... */
-    '@rise-digital/rise/prettier'
-  ]
-}
-```
+* Config is extended with Flowtype support, if `package.json` includes `flow-bin`
+* Config is extended with React support, if `package.json` includes `react`
+* Config is extended with React Native support,if `package.json` includes `react-native`
