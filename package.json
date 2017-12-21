@@ -1,6 +1,6 @@
 {
   "name": "@rise-digital/eslint-config-rise",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ESLint configurations by Rise",
   "main": "index.js",
   "author": "Rise Digital",
