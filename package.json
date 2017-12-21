@@ -3,8 +3,19 @@
   "version": "1.0.0",
   "description": "ESLint configurations by Rise",
   "main": "index.js",
-  "author": "",
+  "author": "Rise Digital",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/risedigital/eslint-config-rise.git"
+  },
+  "keywords": [
+    "eslint",
+    "standard",
+    "flowtype",
+    "react",
+    "react-native"
+  ],
   "dependencies": {
     "babel-eslint": "^8.0.3",
     "eslint-config-standard": "^11.0.0-beta.0",
@@ -18,5 +29,9 @@
   },
   "peerDependencies": {
     "eslint": "^4.13.1"
+  },
+  "homepage": "https://github.com/risedigital/eslint-config-rise#readme",
+  "bugs": {
+    "url": "https://github.com/risedigital/eslint-config-rise/issues"
   }
 }
