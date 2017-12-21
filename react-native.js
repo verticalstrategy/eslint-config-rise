@@ -1,9 +1,9 @@
 module.exports = {
-  extends: [
-    'standard',
-    'plugin:react/recommended'
-  ],
+  extends: 'plugin:react-native/all',
   plugins: [
-    'react'
-  ]
+    'react-native'
+  ],
+  env: {
+    'react-native/react-native': true
+  }
 }
