@@ -12,12 +12,23 @@ const config = require('@rise-digital/eslint-config-rise')
 module.exports = config()
 ```
 
-Or, if running a node app (notice the argument `'node'` passed to the config creator):
+The config creator take an optional argument in form of `overrides`.
+(currently needed to set `env.node = true`, to accept `__dirname`, `__filename` etc.)
 
 ```js
 // .eslintrc.js
 const config = require('@rise-digital/eslint-config-rise')
-module.exports = config('node')
+module.exports = config({
+  rules: {
+    'rule/to-disable': 0
+  },
+  env: {
+    node: true
+  },
+  globals: {
+    logger: true
+  }
+})
 ```
 
 ## Current supported packages

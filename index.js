@@ -7,7 +7,7 @@ const rootPackageJson = module.parent
 const prefix = '@rise-digital/rise/configs'
 const packages = Object.assign({}, rootPackageJson.dependencies, rootPackageJson.devDependencies)
 
-module.exports = (...extended) => {
+module.exports = (overrides = {}) => {
   // initial config
   let config = {
     extends: [
@@ -27,15 +27,8 @@ module.exports = (...extended) => {
     config.extends.push(`${prefix}/flowtype`)
   }
 
-  if (extended.includes('node')) {
-    if (!config.env) {
-      config.env = {}
-    }
-    config.env.node = true
-  }
-
   // note: always add this as the last extension
   config.extends.push(`${prefix}/prettier`)
 
-  return config
+  return Object.assign(config, overrides)
 }
