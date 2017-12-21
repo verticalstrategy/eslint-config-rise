@@ -2,7 +2,7 @@
 ESLint configurations used by us in Rise, we thought you might love them too.
 
 ## Install
-`yarn add --dev eslint @rise-digital/eslint-config-rise`
+`yarn add --dev eslint prettier @rise-digital/eslint-config-rise`
 
 ## Configurations
 
@@ -33,7 +33,7 @@ module.exports = {
 React linting rules.
 
 ```js
-// .eslint.js
+// .eslintrc.js
 module.exports = {
   extends: [
     /* ... */
@@ -52,6 +52,21 @@ module.exports = {
     /* ... */
     '@rise-digital/rise/react',
     '@rise-digital/rise/react-native'
+  ]
+}
+```
+
+### Prettier
+Prettier formatting and linting rules.
+
+_This needs to be added as the last rule, since it's overriding already existing rules._
+
+```js
+// .eslintrc.js
+module.exports = {
+  extends: [
+    /* ... */
+    '@rise-digital/rise/prettier'
   ]
 }
 ```
