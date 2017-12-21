@@ -12,7 +12,7 @@ JavaScript Standard Style linting rules.
 ```js
 // .eslintrc.js
 module.exports = {
-  extends: 'rise'
+  extends: '@rise-digital/rise'
 }
 ```
 
@@ -24,7 +24,7 @@ Flow type linting rules.
 module.exports = {
   extends: [
     /* ... */
-    'rise/flowtype'
+    '@rise-digital/rise/flowtype'
   ]
 }
 ```
@@ -37,7 +37,7 @@ React linting rules.
 module.exports = {
   extends: [
     /* ... */
-    'rise/react'
+    '@rise-digital/rise/react'
   ]
 }
 ```
@@ -46,11 +46,12 @@ module.exports = {
 React Native linting rules.
 
 ```js
+// .eslintrc.js
 module.exports = {
   extends: [
     /* ... */
-    'rise/react', // You want react
-    'rise/react-native'
+    '@rise-digital/rise/react',
+    '@rise-digital/rise/react-native'
   ]
 }
 ```
