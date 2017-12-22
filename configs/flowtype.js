@@ -1,11 +1,11 @@
 module.exports = {
   parser: 'babel-eslint', // ESLint parser does not support type annotations.
   plugins: [
-    'flowtype'
+    'flowtype',
   ],
   settings: {
     flowtype: {
-      onlyFilesWithFlowAnnotation: true
-    }
-  }
+      onlyFilesWithFlowAnnotation: true,
+    },
+  },
 }
