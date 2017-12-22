@@ -33,7 +33,7 @@ module.exports = config({
 
 ## Current supported packages
 
-Ass default `standard` & `prettier` is included in the config.
+By default `standard` & `prettier` is included in the config.
 
 * Config is extended with Flowtype support, if `package.json` includes `flow-bin`
 * Config is extended with React support, if `package.json` includes `react`
