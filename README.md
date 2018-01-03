@@ -3,7 +3,7 @@ ESLint configurations used by us in Rise, we thought you might love them too.
 
 ## Setup
 
-### Quick 'one' liner
+### Quick 'one' liner (install & configuration)
 
 Installs `eslint`, `prettier` & `@rise-digital/eslint-config-rise`,
 and sets up the default `.eslintrc.js` (Warning: this will overwrite an existing `.eslintrc.js`)
@@ -79,7 +79,7 @@ Install the [ESLint extension](https://marketplace.visualstudio.com/items?itemNa
   "editor.formatOnSave": false,
   "eslint.enable": true,
   "eslint.run": "onType",
-  "eslint.autoFixOnSave": true,
+  "eslint.autoFixOnSave": true
 }
 ```
 
@@ -103,6 +103,6 @@ Turn on automatic formatting on save, in the package-settings:
 
 ```json
 {
-  "format_on_save": false,
+  "format_on_save": false
 }
 ```
