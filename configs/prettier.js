@@ -5,9 +5,7 @@ module.exports = {
     'prettier/react',
     'prettier/standard',
   ],
-  plugins: [
-    'prettier',
-  ],
+  plugins: ['prettier'],
   rules: {
     'prettier/prettier': [
       'error',
