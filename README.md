@@ -94,7 +94,7 @@ Use/add the following configuration in your `User Settings`:
 
 [linter-eslint package](https://atom.io/packages/linter-eslint)
 
-Use/add the following  configuration in `Your Config` (`config.cson`):
+Use/add the following configuration in `Your Config` (`config.cson`):
 
 ```cson
 "linter-eslint":
