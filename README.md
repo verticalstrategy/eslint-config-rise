@@ -3,10 +3,11 @@ ESLint configurations used by us in Rise, we thought you might love them too.
 
 ## Setup
 
-### Quick 'one' liner (install & configuration)
+### Quick *one*-liner (install & configuration)
 
 Installs `eslint`, `prettier` & `@rise-digital/eslint-config-rise`,
-and sets up the default `.eslintrc.js` (Warning: this will overwrite an existing `.eslintrc.js`)
+and sets up the default `.eslintrc.js`
+(Warning: this will overwrite an existing `.eslintrc.js`)
 
 ```sh
 yarn add --dev \
@@ -16,11 +17,14 @@ prettier \
 && \
 printf '%s\n%s\n' \
 "const config = require('@rise-digital/eslint-config-rise')" \
-'module.exports = config()' \
+"module.exports = config()" \
 > .eslintrc.js
 ```
 
 ### Install
+
+Install the necessary packages: `eslint`, `prettier` & `@rise-digital/eslint-config-rise`
+
 ```sh
 yarn add --dev \
 eslint \
@@ -30,7 +34,8 @@ prettier \
 
 ### Configuration
 
-Default configuration:
+A default configuration look like this.
+Please note that the rc-file is a `js` file and not `json`, as we look up which packages to support.
 
 ```js
 // .eslintrc.js
@@ -45,13 +50,13 @@ The config creator take an optional options object, to extend or disable specifi
 const config = require('@rise-digital/eslint-config-rise')
 module.exports = config({
   rules: {
-    'rule/to-disable': 0
+    'rule/to-disable': 0,
   },
   env: {
-    node: true
+    node: true,
   },
   globals: {
-    logger: true
+    logger: true,
   }
 })
 ```
@@ -67,11 +72,14 @@ By default `standard` & `prettier` is included in the config.
 
 ## Editor integration setup
 
-Generally we want the editor to lint (`eslint`) while typing, and only fix errors (`eslint --fix`) on save.
+Generally we want the editor to lint (run `eslint`) while typing, and only fix errors (run `eslint --fix`) on save.
+Here are some extensions/packages for various editors:
 
 ### Visual Studio Code
 
-Install the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), and use/add the following configuration on your `User Settings`:
+[ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
+Use/add the following configuration in your `User Settings`:
 
 ```json
 {
@@ -85,9 +93,9 @@ Install the [ESLint extension](https://marketplace.visualstudio.com/items?itemNa
 
 ### Atom
 
-[linter-eslint](https://atom.io/packages/linter-eslint)
+[linter-eslint package](https://atom.io/packages/linter-eslint)
 
-Change/add the following in your `config.cson`:
+Use/add the following  configuration in `Your Config` (`config.cson`):
 
 ```cson
 "linter-eslint":
@@ -96,10 +104,10 @@ Change/add the following in your `config.cson`:
 
 ### Sublime Text
 
-[Sublime​Linter](https://packagecontrol.io/packages/SublimeLinter) + [Sublime​Linter-contrib-eslint](https://packagecontrol.io/packages/SublimeLinter-contrib-eslint)
-[ESLint-Formatter](https://packagecontrol.io/packages/ESLint-Formatter)
+[Sublime​Linter package](https://packagecontrol.io/packages/SublimeLinter) + [Sublime​Linter-contrib-eslint package](https://packagecontrol.io/packages/SublimeLinter-contrib-eslint)
+[ESLint-Formatter package](https://packagecontrol.io/packages/ESLint-Formatter)
 
-Turn on automatic formatting on save, in the package-settings:
+Enable automatic formatting on save, in the package-settings:
 
 ```json
 {
