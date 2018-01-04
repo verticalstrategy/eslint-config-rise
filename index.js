@@ -30,7 +30,7 @@ module.exports = (overrides = {}) => {
     config.extends.push(`${prefix}/flowtype.js`)
   }
 
-  // note: all extends (prettier excluded) should be loaded before this lien
+  // note: all extends (prettier excluded) should be loaded before this line
 
   // move any overrides.extends to current config
   if (overrides.extends) {
