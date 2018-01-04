@@ -83,7 +83,6 @@ Use/add the following configuration in your `User Settings`:
 
 ```json
 {
-  // linting & formatting
   "editor.formatOnSave": false,
   "eslint.enable": true,
   "eslint.run": "onType",
