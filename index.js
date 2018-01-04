@@ -1,16 +1,16 @@
 'use strict'
 
-const isLocal = !!module.parent
-const rootPackageJson = isLocal
-  ? require('./package.json')
-  : module.parent.require('./package.json')
+const rootPackageJson = module.parent
+  ? module.parent.require('./package.json')
+  : require('./package.json')
 
-const prefix = isLocal ? './configs' : '@rise-digital/rise/configs'
 const packages = Object.assign(
   {},
   rootPackageJson.dependencies,
   rootPackageJson.devDependencies
 )
+const isLocal = !packages['@rise-digital/eslint-config-rise']
+const prefix = isLocal ? './configs' : '@rise-digital/rise/configs'
 
 module.exports = (overrides = {}) => {
   // initial config
@@ -30,7 +30,9 @@ module.exports = (overrides = {}) => {
     config.extends.push(`${prefix}/flowtype.js`)
   }
 
-  // move and remove any overrides extends
+  // note: all extends (prettier excluded) should be loaded before this lien
+
+  // move any overrides.extends to current config
   if (overrides.extends) {
     if (Array.isArray(overrides.extends)) {
       Array.prototype.push.apply(config.extends, overrides.extends)
@@ -43,5 +45,12 @@ module.exports = (overrides = {}) => {
   // note: always add this as the last extension
   config.extends.push(`${prefix}/prettier.js`)
 
-  return Object.assign(config, overrides)
+  // apply remaining overrides
+  Object.assign(config, overrides)
+
+  if (isLocal) {
+    console.log('config', config)
+  }
+
+  return config
 }
