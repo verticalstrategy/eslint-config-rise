@@ -15,7 +15,7 @@ const prefix = isLocal ? './configs' : '@rise-digital/rise/configs'
 module.exports = (overrides = {}) => {
   // initial config
   let config = {
-    extends: [`${prefix}/standard.js`],
+    extends: ['eslint:recommended', `${prefix}/standard.js`],
   }
 
   if (packages['react']) {
