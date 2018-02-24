@@ -68,6 +68,7 @@ By default `standard` & `prettier` is included in the config.
 * Config is extended with Flowtype support, if `package.json` includes `flow-bin`
 * Config is extended with React support, if `package.json` includes `react`
 * Config is extended with React Native support,if `package.json` includes `react-native`
+* Config is extended with Jest support,if `package.json` includes `jest`
 
 
 ## Editor integration setup
