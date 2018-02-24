@@ -85,8 +85,6 @@ Use/add the following configuration in your `User Settings`:
 ```json
 {
   "editor.formatOnSave": false,
-  "eslint.enable": true,
-  "eslint.run": "onType",
   "eslint.autoFixOnSave": true
 }
 ```
