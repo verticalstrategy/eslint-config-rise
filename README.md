@@ -109,6 +109,6 @@ Enable automatic formatting on save, in the package-settings:
 
 ```json
 {
-  "format_on_save": false
+  "format_on_save": true
 }
 ```
