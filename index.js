@@ -30,6 +30,10 @@ module.exports = (overrides = {}) => {
     config.extends.push(`${prefix}/flowtype.js`)
   }
 
+  if (packages['jest']) {
+    config.extends.push(`${prefix}/jest.js`)
+  }
+
   // note: all extends (prettier excluded) should be loaded before this line
 
   // move any overrides.extends to current config
@@ -49,7 +53,7 @@ module.exports = (overrides = {}) => {
   Object.assign(config, overrides)
 
   if (isLocal) {
-    console.log('config', config)
+    console.log('config', config) // eslint-disable-line
   }
 
   return config
