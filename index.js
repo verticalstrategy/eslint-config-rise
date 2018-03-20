@@ -7,7 +7,8 @@ const rootPackageJson = module.parent
 const packages = Object.assign(
   {},
   rootPackageJson.dependencies,
-  rootPackageJson.devDependencies
+  rootPackageJson.devDependencies,
+  rootPackageJson.peerDependencies
 )
 const isLocal = !packages['@rise-digital/eslint-config-rise']
 const prefix = isLocal ? './configs' : '@rise-digital/rise/configs'
