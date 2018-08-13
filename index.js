@@ -20,7 +20,11 @@ module.exports = (overrides = {}) => {
   }
 
   if (packages['react']) {
-    config.extends.push(`${prefix}/react.js`)
+    if (packages['react-scripts']) {
+      config.extends.push(`${prefix}/create-react-app.js`)
+    } else {
+      config.extends.push(`${prefix}/react.js`)
+    }
   }
 
   if (packages['react-native']) {
